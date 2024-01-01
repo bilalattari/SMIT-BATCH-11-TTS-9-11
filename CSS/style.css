@@ -1,4 +1,29 @@
-body {
+* {
+  color: olive;
+}
+
+h1,h2 {
+  color: rgb(119, 45, 45);
+}
+
+#sel_heading {
+  color: #aa886a;
+}
+
+.list_item {
+  list-style-type: lower-alpha;
+  color: orange;
+}
+
+h1.css_heading {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+div > h1 {
+  color: black;
+}
+
+/* body {
     background-color: antiquewhite;
     color: blue;
-}
+} */
