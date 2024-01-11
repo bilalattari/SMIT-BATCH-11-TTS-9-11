@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+  font-family: 'Bungee Spice', sans-serif;
+
+}
+
+.wall {
+  min-height: 300px;
+  max-width: 900px;
+  border: 5px solid rgb(252, 212, 159);
+  margin: 12px auto;
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* justify-content , jab aapki flex-direction row ho , to horizontally
+   items ko set krne ke lye ham use krte hen */
+  /* align-items ,jab aapki flex-direction row ho , to vertically
+   items ko set krne ke lye ham use krte hen align-items  */
+  /* flex-wrap */
+  /* flex-grow */
+  /* flex-shrink */
+}
+
+.wall > div {
+  margin: 20px;
+}
+
+img {
+  height: 100px;
+  width: 80px;
+}
+
+.center  {
+  height: 160px;
+  width: 130px;
+  margin: 5px;
+  background-color: rgb(251, 197, 126);
+  border-radius: 4px;
+  border: 2px solid rgb(247, 169, 67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center > i {
+    font-size: 35px;
+    color: white;
+}
+h2{
+    color: white;
+    font-family: 'Bungee Spice', sans-serif;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.center-left{
+    margin-right: 5px;
+}
+.center-right{
+    margin-left: 5px;
+}
