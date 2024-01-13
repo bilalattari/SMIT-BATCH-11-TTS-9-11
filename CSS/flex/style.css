@@ -63,3 +63,20 @@ h2{
 .center-right{
     margin-left: 5px;
 }
+
+/* Simple flex html */
+
+.parent{
+  height: 300px;
+  width: 500px;
+  border: 5px solid black;
+  margin: 21px auto;
+  display: flex;
+}
+
+.box{
+  height: 80px;
+  width: 80px;
+  border: 2px solid black;
+  margin: 4px;
+}
