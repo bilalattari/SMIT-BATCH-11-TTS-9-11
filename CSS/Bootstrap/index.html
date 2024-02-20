@@ -1,59 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <!-- header -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <nav>
-        <div class="top">
-            <img src="https://assets.stickpng.com/images/5847f395cef1014c0b5e487f.png" />
-            <div class="category"> <i class="fa-solid fa-bars"></i> Categories</div>
-            <div class="search_container">
-                <input placeholder="Search Any thing" />
-                <span class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-
-            <div class="icons_container">
-                <span>Sign in</span>
-                <span><i class="fa-regular fa-heart"></i></span>
-                <span><i class="fa-solid fa-bag-shopping"></i></span>
-            </div>
+    <nav
+      class="navbar sticky-top  navbar-expand-lg border-bottom border-2"
+      style="background-color: #fff"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bootstrap-5-logo-icon.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
         </div>
-        <div class="bottom">
-            <p>ABCD</p>
-            <p>ABCD</p>
-            <p>ABCD</p>
-            <p>ABCD</p>
-            <p>ABCD</p>
-        </div>
-        <div class="bottom_search">
-            <div> <i class="fa-solid fa-bars"></i></div>
-            <div class="search_container">
-                <input placeholder="Search Any thing" />
-                <span class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-        </div>
-
+      </div>
     </nav>
 
-    <!-- <div class="parent">
+    <!-- slider -->
 
-        <div class="box">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-96099.jpg?w=1480&t=st=1706762618~exp=1706763218~hmac=7351626fcda6e497b4d8f728db30f4be262851c2f7749768260807847485018c"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/free-photo/abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusiness-reportdigitalwebsite-templatebackdrop_1258-108878.jpg?w=1800&t=st=1706763931~exp=1706764531~hmac=baf15c3ef8e7bfc22bcce71c57e8ed6c2b541f4aad4b8c2701bb00189094eb49"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/free-photo/design-space-decorated-with-leaves-website-banner-template_53876-129927.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=ais"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- info section using accordian -->
+
+    <div class="container mx-auto row my-5">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
+        <img
+          class="info_vector"
+          src="https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7478.jpg?w=996&t=st=1706764694~exp=1706765294~hmac=df46529192e460a003e0fca625fe4a571a3479942cac3282490eace018306eba"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="accordion m-4" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is
+                shown by default, until the collapse plugin adds the appropriate
+                classes that we use to style each element. These classes control
+                the overall appearance, as well as the showing and hiding via
+                CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- progress section using progress -->
+
+    <div class="container mx-auto row my-5">
+      <div class="col-12 col-md-6">
+        <div class="m-4">
+          <p class="lead fw-semibold mt-3">HTML</p>
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+          <p class="lead fw-semibold mt-3">CSS</p>
+
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar" style="width: 25%"></div>
+          </div>
+          <p class="lead fw-semibold mt-3">Javascript</p>
+
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+          <p class="lead fw-semibold mt-3">React Js</p>
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
+        <img
+          class="info_vector"
+          src="https://img.freepik.com/free-vector/idea-concept-illustration_98292-1742.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=sph"
+        />
+      </div>
+    </div>
+
+    <!-- portfolio section using cards -->
+
+    <div class="container">
+      <p class="display-6 fw-bold text-center ">My Portfolio</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+        <div>
+          <div class="card" style="width: 17rem">
+            <img
+              src="https://img.freepik.com/free-vector/woman-online-shopping_603843-3344.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=ais"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Simple Ecommerce website for your small business, shop.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="small_box">
-
+        <div>
+          <div class="card" style="width: 17rem">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-woman-working-as-travel-agent_23-2150433446.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=ais"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Simple Attendance management system for your institution.
+              </p>
+            </div>
+          </div>
         </div>
-    </div> -->
-</body>
 
+        <div>
+          <div class="card" style="width: 17rem">
+            <img
+              src="https://img.freepik.com/free-vector/woman-online-shopping_603843-3344.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=ais"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Simple Ecommerce website for your small business, shop.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="width: 17rem">
+            <img
+              src="https://img.freepik.com/free-vector/woman-online-shopping_603843-3344.jpg?size=626&ext=jpg&ga=GA1.1.1661104625.1706762177&semt=ais"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Simple Ecommerce website for your small business, shop.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

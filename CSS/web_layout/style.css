@@ -1,0 +1,8 @@
+.search_bar{
+    position: relative;
+    top: 42px;
+}
+
+.search_bar > div{
+    min-height: 40px;
+}
