@@ -11,7 +11,7 @@
      console.log("admission nhi hua") 
      document.write("<h1>admission nhi hogaya</h1>")
   }
-  if html && css quiz number > 150 so you are eligible else not 
+  //if html && css quiz number > 150 so you are eligible else not 
 
   var html = +prompt("write your html numbers")
   var css = +prompt("write your css numbers")
