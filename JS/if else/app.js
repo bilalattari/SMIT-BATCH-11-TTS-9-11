@@ -1,4 +1,4 @@
- // if(condition){
+// if(condition){
 //     result
 // }
 
@@ -73,19 +73,6 @@
 //     alert("your operator does not exist")
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Comparison operators
 //==
 //===
@@ -97,7 +84,7 @@
 //  ||
 
 // var number = 20
-// if (number === 20){
+// if (number == '20'){
 // console.log("equal");
 // }
 // else{
@@ -111,19 +98,53 @@
 // }
 
 // if & else if 
-var age = +prompt("enter age")
-var clas = +prompt("enter time")
-if (age > 8 && clas < 3 ) {
-    alert("Come to our school!");
-     }
-     else {
-     alert("dont Come to our school!");
-     }
-var weight = +prompt("enter weight")
-var time = +prompt("enter time")
-if (weight > 300 || time < 6) {
-    alert("Come to our tryout!");
-     }
-     else {
-     alert("Come to our cookout!");
-     }
+// var age = +prompt("enter age")
+// var clas = +prompt("enter time")
+// if (age > 8 && clas < 3 ) {
+//     alert("Come to our school!");
+//      }
+//      else {
+//      alert("dont Come to our school!");
+//      }
+// var weight = +prompt("enter weight")
+// var time = +prompt("enter time")
+// if (weight > 300 || time < 6) {
+//     alert("Come to our tryout!");
+//      }
+//      else {
+//      alert("Come to our cookout!");
+//     }
+
+
+// var password = "smit";
+// var userinput = prompt("type yor input")
+// console.log(userinput);
+// if (password == userinput){
+//     console.log("password is correct");
+// }
+// else{
+//     console.log("password is not correct");
+// }
+
+// nested if else 
+
+// var dinner = prompt("what do you want in dinner")
+// console.log(dinner);
+// if (dinner == 'biryani' || dinner == 'tikka' || dinner == 'pizza') {
+//     console.log("it is Available")
+
+//     // nested
+//     if (dinner == "biryani") {
+//         alert("biryani price : 300")
+//     }
+//     else if (dinner == "tikka"){
+//         alert("tikka price : 500")
+//     }
+//     else{
+//         alert("pizza price : 1000")
+// }
+
+// }
+// else {
+//     console.log("it is not availabe")
+// }
