@@ -70,13 +70,31 @@ console.log('fruits after remove---->', fruits)
 console.log('fruits after remove---->', deleted)
 
 //add bhe krna he or remove bhe
-
 var updated = fruits.splice(4, 1, 'Cheeku')
 
 console.log('fruits after add remove-->', fruits)
 console.log('updated-->', updated)
 
+// slice use hota he copy krne ke lye
 var copy3 = fruits.slice(1, 4)
-
 console.log('copy3---?', copy3)
 console.log('copy3---?', fruits)
+
+
+//string ko array mein convert krne ke lye ham use krte hen
+//split
+
+var string = 'Ramadan is the blessed month.'
+var keys = '421-132-213-21132'
+
+var wordsArr = string.split(' ')
+var keysArr = keys.split('-')
+console.log('wordsArr--->', wordsArr)
+
+
+//array ko string   mein convert krne ke lye ham use krte hen
+//join
+
+var arr = ['Karachi' , 'Lahore' , 'Islamabad']
+
+console.log(arr.join(' , '))
