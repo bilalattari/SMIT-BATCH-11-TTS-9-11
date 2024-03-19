@@ -16,7 +16,16 @@ for (var i = 1; i <= 7; i++) {
 }
 
 // 20 tk ka table banana he
-var tableNumber = prompt('Table number')
-for (var i = 1; i <= 100; i++) {
-  document.write(tableNumber, ' x ', i, ' = ', tableNumber * i, '<br> <br>')
+// var tableNumber = prompt('Table number')
+// for (var i = 1; i <= 100; i++) {
+//   document.write(tableNumber, ' x ', i, ' = ', tableNumber * i, '<br> <br>')
+// }
+
+var weekDays = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
+
+// document.write(weekDays[0])
+// document.write(weekDays[1])
+// document.write(weekDays[2])
+for (var i = 0; i < weekDays.length; i++) {
+  document.write(weekDays[i] + "<br>")
 }
