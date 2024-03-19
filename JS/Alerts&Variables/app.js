@@ -26,15 +26,7 @@ var noOfStudents = 50 // number
 var isClassGoingOn = true // boolean
 var noOfStudentsPassed //value will be undefined
 
-// alphabets ham string mein denge agr us naam ka koi variabla na ho to
-
-var teacherName = "Bilal Raza"
-
-// variable ko update krne ka tariqa , us variable ka naam likhenge or = ke baad new value likh denge
 alert(greetings)
-
-greetings = "Hello Javascript"
-
 alert(noOfStudents)
 alert(isClassGoingOn)
 alert(noOfStudentsPassed)
@@ -49,5 +41,3 @@ var first_name = 'Bilal'
     // nahn aega.
 // 4.variable ka naam javascript ke keyword ke naam par na ho.
 // 5.best practice ye he ke naam camelCase   mein likha jae
-
-
