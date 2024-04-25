@@ -83,19 +83,19 @@
 //  &&
 //  ||
 
-// var number = 20
-// if (number == '20'){
+var number = 20
+ // if (number == '20'){
 // console.log("equal");
 // }
 // else{
 // console.log("not equal");
 // }
-// if (number != 30) {
-//     console.log("not equal")
-// }
-// else {
-//     console.log("equal");
-// }
+ if (number != 30) {
+    console.log(" equal")
+ }
+else {
+    console.log("notequal");
+}
 
 // if & else if 
 // var age = +prompt("enter age")
@@ -130,21 +130,20 @@
 
 // var dinner = prompt("what do you want in dinner")
 // console.log(dinner);
-// if (dinner == 'biryani' || dinner == 'tikka' || dinner == 'pizza') {
-//     console.log("it is Available")
+if (dinner == 'biryani' || dinner == 'tikka' || dinner == 'pizza') {
+    console.log("it is Available")
 
-//     // nested
-//     if (dinner == "biryani") {
-//         alert("biryani price : 300")
-//     }
-//     else if (dinner == "tikka"){
-//         alert("tikka price : 500")
-//     }
-//     else{
-//         alert("pizza price : 1000")
-// }
-
-// }
-// else {
-//     console.log("it is not availabe")
-// }
+    // nested
+    if (dinner == "biryani") {
+        alert("biryani price : 300")
+    }
+    else if (dinner == "tikka"){
+        alert("tikka price : 500")
+    }
+    else{
+        alert("pizza price : 1000")
+}
+}
+else {
+    console.log("it is not availabe")
+}

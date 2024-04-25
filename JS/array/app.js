@@ -97,4 +97,5 @@ console.log('wordsArr--->', wordsArr)
 
 var arr = ['Karachi' , 'Lahore' , 'Islamabad']
 
+console.log(typeof arr);
 console.log(arr.join(' , '))
