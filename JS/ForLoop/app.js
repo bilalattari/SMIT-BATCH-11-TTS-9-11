@@ -4,9 +4,7 @@
 // for (var i = 1; i <= 10; i++) {
 //     document.write(`<li>${i * i}</li>`)
 // }
-//1
-//2
-//9
+
 // document.write(` <h4>Q2. Find largest number from this 
 // array [0 ,30,10,31,42,22,144,21,42]</h4>`)
 // var arr = [0, 30, 10, 31, 42, 22, 144, 21, 42]
@@ -93,18 +91,17 @@
 //     }
 // }
 
-var pass = ['Bilal', 'Raza', 'Abdullah', 'Umar', 'Ahmed']
-var fail = ['Faiz', 'Shariq', 'Raza', 'Usman', 'Ahsan', 'Bilal']
-var duplicates = []
-for (var i = 0; i < pass.length; i++) {
-    // console.log('i=>', pass[i])
-    for (var j = 0; j < fail.length; j++) {
-        // console.log('j=>', fail[j])
-        if (pass[i] === fail[j]) {
-            duplicates.push(pass[i])
-        }
-    }
-}
-console.log(duplicates)
-
+// var pass = ['Bilal', 'Raza', 'Abdullah', 'Umar', 'Ahmed']
+// var fail = ['Faiz', 'Shariq', 'Razaaa', 'Usman', 'Ahsan', 'Bilal']
+// var duplicates = []
+// for (var i = 0; i < pass.length; i++) {
+//     console.log('i=>', pass[i])
+//     for (var j = 0; j < fail.length; j++) {
+//         console.log('j=>', fail[j])
+//         if (pass[i] === fail[j]) {
+//             duplicates.push(pass[i])
+//         }
+//     }
+// }
+// console.log(duplicates)
 
