@@ -8,17 +8,20 @@ var diff = baqraEid.getTime() - now.getTime()
 
 var interval = setInterval(function () {
   var currentDate = new Date()
-  diff = diff - 1000
-  var days = diff / 1000 / 60 / 60 / 24
-  //   var hours =  diff / 1000 / 60 / 60
-  var hours = 24 - currentDate.getHours()
-  //   var mins = diff / 1000 / 60
-  var mins = 60 - currentDate.getMinutes()
-  // var seconds = diff / 1000
-  var seconds = 60 - currentDate.getSeconds()
+  if (diff > 0) {
+    diff = diff - 1000
+    var days = diff / 1000 / 60 / 60 / 24
+    //   var hours =  diff / 1000 / 60 / 60
+    var hours = 24 - currentDate.getHours()
+    //   var mins = diff / 1000 / 60
+    var mins = 60 - currentDate.getMinutes()
+    // var seconds = diff / 1000
+    var seconds = 60 - currentDate.getSeconds()
 
-  days_html.innerText = Math.floor(days)
-  hours_html.innerText = Math.floor(hours)
-  mins_html.innerText = Math.floor(mins)
-  seconds_html.innerText = Math.floor(seconds)
+    days_html.innerText = Math.floor(days)
+    hours_html.innerText = Math.floor(hours)
+    mins_html.innerText = Math.floor(mins)
+    seconds_html.innerText = Math.floor(seconds)
+  }
+
 }, 1000)
