@@ -20,7 +20,7 @@ h1 {
   height: 100px;
   min-width: 100px;
   padding: 10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ h1 {
   flex-direction: column;
 }
 
-.heading{
-    font-size: 20px;
-    margin-bottom: 6px;
+.heading {
+  font-size: 20px;
+  margin-bottom: 6px;
 }
