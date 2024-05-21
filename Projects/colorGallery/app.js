@@ -1,3 +1,4 @@
+
 var preview = document.getElementById('previewImg')
 var allBoxes = document.getElementsByClassName('box')
 for (var i = 0; i < allBoxes.length; i++) {
