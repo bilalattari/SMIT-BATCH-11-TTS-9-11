@@ -29,8 +29,7 @@ function checkIsUserLogin() {
     login_container.style.display = "none";
     home_container.style.display = "block";
     user_email.innerText = email;
-showTodos();
-
+    showTodos();
   } else {
     login_container.style.display = "block";
     home_container.style.display = "none";
@@ -93,3 +92,49 @@ function showTodos() {
   }
 }
 showTodos();
+
+var arrOfObjects = [
+  {
+    cowColor: "red",
+    kilo: 500,
+    price: 100000,
+  },
+  {
+    cowColor: "brown",
+    kilo: 400,
+    price: 90000,
+  },
+  {
+    cowColor: "white",
+    kilo: 850,
+    price: 120000,
+  },
+  {
+    cowColor: "black",
+    kilo: 1000,
+    price: 150000,
+  },
+];
+
+var lakhSeKam = arrOfObjects.filter(function (data, ind) {
+  return data.price < 100000;
+});
+
+console.log("lakhSeKam=>", lakhSeKam);
+
+// var array = ["bilal", "ahmed", "hassan"];
+
+// function saveToLocalStorage() {
+//   localStorage.setItem("array", JSON.stringify(array));
+// }
+
+// function removeLastItemOfArray() {
+//   var arr = localStorage.getItem("array");
+//   arr = JSON.parse(arr);
+//   arr.pop()
+//   console.log("remove function=>", arr);
+//   localStorage.setItem("array", JSON.stringify(arr));
+// }
+
+// // saveToLocalStorage();
+// removeLastItemOfArray()

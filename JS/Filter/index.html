@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <div class="flex items-center justify-center w-full center my-3">
+        <input class="border rounded w-1/2 p-3 text-lg " type="search" id="search_input" placeholder="Search" />
+
+        <select class="border rounded p-3 text-lg ml-1 " name="priority" id="priority">
+            <option value="">Select</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div> 
+    <div id="todo_list">
+        
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
