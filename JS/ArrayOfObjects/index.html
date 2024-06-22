@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      h1{
+        text-align: center;
+      }
+      table{
+        width: 800px;
+        border: 1px solid black;
+        margin: 0px auto;
+      }
+      th {
+        border-bottom: 1px solid black;
+        padding: 10px;
+      }
+      td {
+        padding: 10px 15px;
+        border-bottom: 1px solid lightcoral;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>ARRAY OF OBJECTS</h1>
+
+    <div>
+      <button onclick="showAbove80()">Between 80 && 90</button>
+      <button onclick="showAbove90()">Above 90</button>
+    </div>
+    <table >
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Marks</th>
+      </tr>
+      <tbody id="user_table">
+
+      </tbody>
+    </table>
+    <script src="app.js"></script>
+  </body>
+</html>

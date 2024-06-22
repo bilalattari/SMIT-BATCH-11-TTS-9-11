@@ -1,0 +1,88 @@
+/* * {
+  color: rgb(15, 12, 12);
+  text-align: center;
+} */
+/* id selector */
+/* #idSelector {
+  color: orange;
+} */
+
+/* Class selector */
+/* .list_item {
+  color: brown;
+} */
+
+/* Child selector */
+
+/* ul > li {
+  font-family: monospace;
+} */
+/* ul > li > span {
+  text-decoration: underline;
+  color: black;
+} */
+
+/* .list_item > span {
+  font-weight: bold;
+  color: brown;
+} */
+
+/* li,
+span {
+  font-style: italic;
+} */
+
+/* descendant selector */
+/* p span {
+  font-size: 20px;
+} */
+/* body > ul > li > span {
+  color: aquamarine;
+} */
+
+/* #text-properties {
+  color: blueviolet;
+}
+
+#text-properties span {
+  color: red;
+}
+
+div a {
+  font-family: monospace;
+  color: orange;
+} */
+
+/* div > a {
+    color: orange;
+} */
+
+h1 {
+ text-align: center;
+ color: gray;
+}
+
+#menu {
+    text-align: center;
+}
+
+#menu > span{
+    margin: 30px;
+}
+
+#menu a{
+    color: blue;
+}
+
+.container{
+    background-color: rgb(248, 228, 248);
+}
+
+h4{
+    text-align: center;
+}
+
+.info{
+    width: 600px;
+    display: inline-block;
+}
