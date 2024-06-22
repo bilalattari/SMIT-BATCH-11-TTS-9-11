@@ -53,3 +53,5 @@ function displayProducts(products) {
 }
 
 getProductsFromApi(displayProducts);
+
+
