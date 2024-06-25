@@ -129,7 +129,7 @@ fetch("https://fakestoreapi.com/products")
   .then((data) => {
     products = data;
     displayProducts();
-  });
+  }).catch((err)=> console.log(err));
 
 function displayProducts() {
   let list = document.getElementById("list");
