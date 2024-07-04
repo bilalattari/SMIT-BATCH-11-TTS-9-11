@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Document</title>
-</head>
-<body>
-    <script src="app.js" type="module" ></script>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div id="authentication">
+        <div id="signupCotainer">
+          <div><input type="text" placeholder="email" id="signupemail" /></div>
+          <br />
+          <div>
+            <input type="password" placeholder="password" id="signuppassword" />
+          </div>
+          <br />
+          <button id="signupBtn">signup</button>
+        </div>
+        <div id="signinCotainer">
+          <div><input type="text" placeholder="email" id="signinemail" /></div>
+          <div>
+            <input type="password" placeholder="password" id="signinpassword" />
+          </div>
+          <button id="signinBtn">signin</button>
+        </div>
+      </div>
+
+      <div id="content">
+        <button id="logoutBtn">logout</button>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
 </html>
