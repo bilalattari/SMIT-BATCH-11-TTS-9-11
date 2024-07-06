@@ -6,7 +6,12 @@ import {
   signOut,
   signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
-
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyCNEplx2T0vwmSOSuInj9SvXZzUESAuLNg",
   authDomain: "hidden-analyzer-425514-u8.firebaseapp.com",
@@ -19,10 +24,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log("app-->", app);
 const auth = getAuth(app);
+const db = getFirestore(app);
+console.log("app-->", app);
 console.log("auth-->", auth);
+console.log("db", db);
 
+const authentication = document.getElementById("authentication");
 const signupemail = document.getElementById("signupemail");
 const signuppassword = document.getElementById("signuppassword");
 const signupBtn = document.getElementById("signupBtn");
@@ -31,9 +39,10 @@ const signinemail = document.getElementById("signinemail");
 const signinpassword = document.getElementById("signinpassword");
 const signinBtn = document.getElementById("signinBtn");
 
-const authentication = document.getElementById("authentication");
 const content = document.getElementById("content");
 const logoutBtn = document.getElementById("logoutBtn");
+const showEmail = document.getElementById("showEmail");
+const allusersdiv = document.getElementById("allusers");
 
 signupBtn.addEventListener("click", signupUser);
 logoutBtn.addEventListener("click", logoutuser);
@@ -44,7 +53,8 @@ onAuthStateChanged(auth, (user) => {
     console.log("user id", uid);
     content.style.display = "block";
     authentication.style.display = "none";
-    content.innerHTML += `<p> welcome ${user.email} </p>`;
+    showEmail.innerHTML = `<p> welcome ${user.email} </p>`;
+    getAllUsers();
   } else {
     console.log("user is not avalible");
     content.style.display = "none";
@@ -52,12 +62,14 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 function signupUser() {
-  console.log(signupemail.value, signuppassword.value);
-  createUserWithEmailAndPassword(auth, signupemail.value, signuppassword.value)
+  const emailvalue = signupemail.value;
+  const passwordvalue = signuppassword.value;
+  createUserWithEmailAndPassword(auth, emailvalue, passwordvalue)
     .then((userCredential) => {
       // Signed up
       const user = userCredential.user;
       console.log("user", user);
+      addData(emailvalue, passwordvalue);
       // ...
     })
     .catch((error) => {
@@ -80,7 +92,6 @@ function signinUser() {
       console.log("sign in error", errorMessage);
     });
 }
-
 function logoutuser() {
   signOut(auth)
     .then(() => {
@@ -89,4 +100,32 @@ function logoutuser() {
     .catch((error) => {
       console.log("logouterror", error);
     });
+}
+
+async function addData(email, pasword) {
+  try {
+    const userCollection = collection(db, "allusers");
+    const userRef = await addDoc(userCollection, {
+      email: email,
+      pasword: pasword,
+      created_at: new Date().toISOString(),
+    });
+    console.log("Document written with ID: ", userRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
+
+async function getAllUsers() {
+  const userCollecton = collection(db, "allusers");
+  const querySnapshot = await getDocs(userCollecton);
+  allusersdiv.innerHTML=''
+  querySnapshot.forEach((user) => {
+    console.log(`${user.id} => ${user.data().email}`);
+    var addusers = `<div id=${user.id}>
+<p>${user.data().email}</p>
+<p>${user.data().pasword}</p>
+</div>`;
+allusersdiv.innerHTML +=addusers
+  });
 }
