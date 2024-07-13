@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <a
+          href="https://flowbite.com"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Love Food</span
+          >
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="tel:5541251234"
+            class="text-sm text-gray-500 dark:text-white hover:underline"
+            >(555) 412-1234</a
+          >
+          <a
+            href="auth/createAccount.html"
+            id="login_btn"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >Login</a
+          >
+          <a
+            href="auth/createAccount.html"
+            id="user_info"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+          ></a>
+          <a
+            href="createRecipe/index.html"
+            id="create_recipe_btn"
+            style="display: none"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >Create Recipe</a
+          >
+
+          <button
+            id="logout_btn"
+            style="display: none"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-gray-50 dark:bg-gray-700">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center">
+          <ul
+            class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+          >
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:underline"
+                aria-current="page"
+                >All Foods</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-900 dark:text-white hover:underline"
+                >My Foods</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="cards_container" style="display: flex; flex-wrap: wrap;gap: 10px;">
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

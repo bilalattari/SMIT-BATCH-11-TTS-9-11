@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <div id="login_container">
+        <form id="signin_form" class="form">
+          <p class="form-title">Sign in to your account</p>
+          <div class="input-container">
+            <input required type="email" placeholder="Enter email" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input required type="password" placeholder="Enter password" />
+          </div>
+          <button type="submit" class="submit">Sign in</button>
+
+          <p class="signup-link">
+            No account?
+            <button id="goToCreateAccount">Sign Up</button>
+          </p>
+        </form>
+      </div>
+      <div id="signup_container">
+        <form id="signup_form" class="form">
+          <p class="form-title">Create your account</p>
+          <div class="input-container">
+            <input type="text" placeholder="Your Full Name" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Enter email" />
+            <span> </span>
+          </div>
+          <div class="input-container">
+            <input type="password" placeholder="Enter password" />
+          </div>
+          <button type="submit" class="submit">Sign Up</button>
+
+          <p class="signup-link">
+            Already Account?
+            <button href="" id="goToSignIn">Sign In</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
