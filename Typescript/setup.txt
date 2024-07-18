@@ -1,0 +1,4 @@
+1.Download Node js , pre built installer
+2.Install the node js you download
+3.Install Typescript globally npm install -g typescript
+4.check if typescript is downloaded by entering tsc in command prompt.
