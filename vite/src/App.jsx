@@ -1,60 +1,62 @@
 import "./App.css";
+import Avatar from "./components/Avatar";
 
 function App() {
   const batch = "SMIT-TTS-9-11-(HO)";
   const isLogin = false;
-  const students = [
+
+  const users = [
     {
-      name: "Siddique",
-      rollNo: 122425,
+      img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      title: "See Stars in the Sky",
+      username: "Galaxy",
+      bgColor : "black",
+      txtColor : "white"
     },
     {
-      name: "ABCD",
-      rollNo: 12345,
+      img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      title: "See Stars in the Sky",
+      username: "Flowers",
+      bgColor : "purple",
+      txtColor : "white"
     },
     {
-      name: "AAA",
-      rollNo: 12345,
+      img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      title: "See Stars in the Sky",
+      username: "Waterfall",
+      bgColor : "skyblue",
+      txtColor : "blue"
     },
     {
-      name: "SSS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 1233345,
-    },
-    {
-      name: "DDSDS",
-      rollNo: 12345,
+      img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
+      title: "See Stars in the Sky",
+      username: "ABCD",
+      bgColor : "brown",
+      txtColor : "white"
     },
   ];
 
   return (
     <div>
-      <h1>Our Batch is {batch} </h1>
+      <h1 className="text-3xl underline text-center font-semibold my-4">
+        USER PROFILES
+      </h1>
 
-      <button> {isLogin ? "Log out" : "Login"} </button>
+      {users.map((data, ind) => (
+        <Avatar
+          key={ind}
+          bgColor={data.bgColor}
+          txtColor={data.txtColor}
+          img={data.img}
+          username={data.username}
+          title={data.title}
+          onClick={() => console.log(data)}
+        />
+      ))}
+
+      {/* <h1>Our Batch is {batch} </h1> */}
+
+      {/* <button> {isLogin ? "Log out" : "Login"} </button>
 
       <table>
         <thead>
@@ -75,7 +77,7 @@ function App() {
             );
           })}
         </tbody>
-      </table>
+      </table> */}
 
       {/* <h1>
         This Function {`()=> "string"`} returns
