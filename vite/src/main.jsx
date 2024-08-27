@@ -3,5 +3,6 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import UseState from "./UseState.jsx";
+import UseEffect from "./UseEffect.jsx";
 
-createRoot(document.getElementById("root")).render(<UseState />);
+createRoot(document.getElementById("root")).render(<UseEffect />);
