@@ -5,12 +5,14 @@ function UseState() {
   const [num, setNum] = useState(0);
   const [username, setUsername] = useState("123");
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState([  
     "Shopping",
     "Learning",
     "Chae ki Hotel",
     "Cricket",
   ]);
+
+  const setNumFunc = () => num++;
 
   const addTodo = () => {
     setTodos([...todos, todo]);
