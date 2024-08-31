@@ -5,5 +5,6 @@ import "./index.css";
 import UseState from "./UseState.jsx";
 import UseEffect from "./UseEffect.jsx";
 import Weather from "./Weather.jsx";
+import StatusCard from "./StatusCard.jsx";
 
-createRoot(document.getElementById("root")).render(<Weather />);
+createRoot(document.getElementById("root")).render(<StatusCard />);
