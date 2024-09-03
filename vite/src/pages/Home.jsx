@@ -1,7 +1,6 @@
-import "./App.css";
-import Avatar from "./components/Avatar";
+import Avatar from "../components/Avatar";
 
-function App() {
+function Home() {
   const batch = "SMIT-TTS-9-11-(HO)";
   const isLogin = false;
 
@@ -89,4 +88,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

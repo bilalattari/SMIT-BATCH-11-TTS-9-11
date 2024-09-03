@@ -1,10 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
-import UseState from "./UseState.jsx";
-import UseEffect from "./UseEffect.jsx";
-import Weather from "./Weather.jsx";
-import StatusCard from "./StatusCard.jsx";
+import AppRouter from "./Route.jsx";
 
-createRoot(document.getElementById("root")).render(<StatusCard />);
+
+createRoot(document.getElementById("root")).render(<AppRouter />);

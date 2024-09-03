@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function UseEffect() {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,7 @@ function UseEffect() {
 
   console.log("Component Chal gya", search);
   return (
-    <div>
+    <div className="container mx-auto">
       <h1>Learning Use Effect</h1>
       <input
         placeholder="Search"
@@ -33,9 +34,14 @@ function UseEffect() {
         onChange={(e) => setSearch(e.target.value)}
       />
       {searched.map((data) => (
-        <h1 className="text-left p-2 my-1 bg-purple-100" key={data.id}>
-          {data.id + ") "} {data.title}
-        </h1>
+        <Link key={data.id} to={`/product/${data.id}`}>
+          <div className="flex w-100 items-center px-2 bg-purple-100 my-2">
+            <img className="h-10 w-10" src={data.image} />
+            <h1 className="text-left p-2 my-1 ">
+              {data.id + ") "} {data.title}
+            </h1>
+          </div>
+        </Link>
       ))}
     </div>
   );

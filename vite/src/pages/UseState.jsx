@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./components/Button";
+import Button from "../components/Button";
 
 function UseState() {
   const [num, setNum] = useState(0);
