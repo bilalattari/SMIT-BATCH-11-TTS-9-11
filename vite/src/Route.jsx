@@ -16,9 +16,9 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/useState" element={<UseState />} />
         <Route path="/useEffect" element={<UseEffect />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/statusCard" element={<StatusCard />} />
         <Route path="/weather" element={<Weather />} />
-        <Route path="/product/:id" element={<Product />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

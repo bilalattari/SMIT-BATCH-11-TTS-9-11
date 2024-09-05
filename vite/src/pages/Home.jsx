@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import Avatar from "../components/Avatar";
+import { ThemeContext } from "../context/ThemeContext";
 
 function Home() {
+  const theme = useContext(ThemeContext);
+  console.log("theme=>", theme);
+
   const batch = "SMIT-TTS-9-11-(HO)";
   const isLogin = false;
 
@@ -9,29 +14,29 @@ function Home() {
       img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
       title: "See Stars in the Sky",
       username: "Galaxy",
-      bgColor : "black",
-      txtColor : "white"
+      bgColor: "black",
+      txtColor: "white",
     },
     {
       img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
       title: "See Stars in the Sky",
       username: "Flowers",
-      bgColor : "purple",
-      txtColor : "white"
+      bgColor: "purple",
+      txtColor: "white",
     },
     {
       img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
       title: "See Stars in the Sky",
       username: "Waterfall",
-      bgColor : "skyblue",
-      txtColor : "blue"
+      bgColor: "skyblue",
+      txtColor: "blue",
     },
     {
       img: "https://images.unsplash.com/photo-1712510795837-683b93b2b95e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8",
       title: "See Stars in the Sky",
       username: "ABCD",
-      bgColor : "brown",
-      txtColor : "white"
+      bgColor: "brown",
+      txtColor: "white",
     },
   ];
 

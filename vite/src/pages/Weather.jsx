@@ -23,7 +23,7 @@ function Weather() {
 
   const temp = Math.round(currentWeather?.main?.temp - 273.15);
   const feelsLike = Math.round(currentWeather?.main?.feels_like - 273.15);
-  const weatherCondtion = currentWeather?.weather[0]?.main;
+  const weatherCondtion = currentWeather?.weather ?  currentWeather?.weather[0]?.main : "";
   return (
     <div>
       <h1>Weather App</h1>

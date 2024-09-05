@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 
 function UseEffect() {
+  const { theme, setTheme } = useContext(ThemeContext);
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
 
