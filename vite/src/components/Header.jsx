@@ -2,13 +2,22 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 import Button from "./Button";
+import { UserContext } from "../context/UserContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 function Header() {
+  const { user } = useContext(UserContext);
   const { theme, setTheme } = useContext(ThemeContext);
   console.log("theme in header=>", theme);
+  console.log("user in header=>", user);
   const navigate = useNavigate();
 
   const goToHomePage = () => navigate("/");
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+  };
 
   return (
     <header
@@ -33,24 +42,36 @@ function Header() {
           <Link className="ml-3 text-xl">Learning React Router</Link>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link to="/weather" className="mr-5 hover:text-gray-900">
+          {/* <Link to="/weather" className="mr-5 hover:text-gray-900">
             Weather App
           </Link>
           <Link to="/useState" className="mr-5 hover:text-gray-900">
             Use State
-          </Link>
+          </Link> */}
           <Link to="/useEffect" className="mr-5 hover:text-gray-900">
             Use Effect
           </Link>
           <Link to="/statusCard" className="mr-5 hover:text-gray-900">
             Status Cards
           </Link>
+
+          {user?.isLogin ? (
+            <div className="flex items-center">
+              <h1 className="mx-2">{user.email}</h1>
+              <Button text={"SignOut"} onClick={handleSignOut} />
+            </div>
+          ) : (
+            <Link to="/signin" className="mr-5 hover:text-gray-900">
+              Login
+            </Link>
+          )}
         </nav>
-        <Button text={theme == 'light' ? 'Make it Dark' : "Make it Light"}
-         onClick={()=>{
-          setTheme(theme == 'light' ? 'dark' : "light")
-        }} /> 
-      
+        <Button
+          text={theme == "light" ? "Make it Dark" : "Make it Light"}
+          onClick={() => {
+            setTheme(theme == "light" ? "dark" : "light");
+          }}
+        />
       </div>
     </header>
   );

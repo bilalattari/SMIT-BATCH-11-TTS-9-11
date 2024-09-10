@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import Avatar from "../components/Avatar";
 import { ThemeContext } from "../context/ThemeContext";
+import { UserContext } from "../context/UserContext";
 
 function Home() {
+  const { user } = useContext(UserContext);
   const theme = useContext(ThemeContext);
   console.log("theme=>", theme);
 
@@ -45,6 +47,11 @@ function Home() {
       <h1 className="text-3xl underline text-center font-semibold my-4">
         USER PROFILES
       </h1>
+      {user.isLogin ? (
+        <h1 className="text-3xl underline text-center font-semibold my-4">
+          Welcome {user.email}
+        </h1>
+      ) : null}
 
       {users.map((data, ind) => (
         <Avatar

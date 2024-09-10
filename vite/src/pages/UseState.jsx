@@ -12,7 +12,7 @@ function UseState() {
     "Cricket",
   ]);
 
-  const setNumFunc = () => num++;
+  // const setNumFunc = () => num++;
 
   const addTodo = () => {
     setTodos([...todos, todo]);
