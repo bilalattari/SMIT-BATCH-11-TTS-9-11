@@ -17,6 +17,7 @@ function Header() {
 
   const handleSignOut = async () => {
     await signOut(auth);
+    navigate("/");
   };
 
   return (
@@ -57,7 +58,9 @@ function Header() {
 
           {user?.isLogin ? (
             <div className="flex items-center">
-              <h1 className="mx-2">{user.email}</h1>
+              <Link to={"/profile"}>
+                <h1 className="mx-2">{user.username}</h1>
+              </Link>
               <Button text={"SignOut"} onClick={handleSignOut} />
             </div>
           ) : (

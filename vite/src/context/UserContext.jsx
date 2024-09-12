@@ -1,6 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import { auth } from "../utils/firebase";
+import { auth, db } from "../utils/firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 export const UserContext = createContext();
 
@@ -9,20 +10,26 @@ function UserContextProvider({ children }) {
     isLogin: false,
     email: "",
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const subscribe = onAuthStateChanged(auth, (user) => {
+    const subscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
+        const docRef = doc(db, "users", user.uid);
+        const userInfo = await getDoc(docRef);
+        console.log("userInfo->", userInfo.data());
         setUser({
           isLogin: true,
-          email: user.email,
+          ...userInfo.data(),
         });
+        setLoading(false);
         console.log("User Login he", user);
       } else {
         setUser({
           isLogin: false,
           email: "",
         });
+        setLoading(false);
         console.log("User Login nahn he");
       }
     });
@@ -31,7 +38,7 @@ function UserContextProvider({ children }) {
   }, []);
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      {children}
+      {loading ? "Loading..." : children}
     </UserContext.Provider>
   );
 }
