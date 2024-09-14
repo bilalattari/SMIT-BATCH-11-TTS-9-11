@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
-import Button from "./Button";
 import { UserContext } from "../context/UserContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { CartContext } from "../context/CartContext";
+import { Badge, Button } from "antd";
+import { LogoutOutlined, MoonOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 
 function Header() {
+  const { cartItems } = useContext(CartContext);
   const { user } = useContext(UserContext);
   const { theme, setTheme } = useContext(ThemeContext);
   console.log("theme in header=>", theme);
@@ -57,11 +60,13 @@ function Header() {
           </Link>
 
           {user?.isLogin ? (
-            <div className="flex items-center">
+            <div className="flex mx-2 rounded-md items-center border-2 border-gray-200 py-1">
               <Link to={"/profile"}>
                 <h1 className="mx-2">{user.username}</h1>
               </Link>
-              <Button text={"SignOut"} onClick={handleSignOut} />
+              <Button className="mx-2" shape="circle" icon={<LogoutOutlined />} onClick={handleSignOut} >
+
+              </Button>
             </div>
           ) : (
             <Link to="/signin" className="mr-5 hover:text-gray-900">
@@ -69,8 +74,24 @@ function Header() {
             </Link>
           )}
         </nav>
+
+        <Link to={'/cart'}>
+          <Badge count={cartItems.length} className="mx-4">
+
+            <Button
+              icon={<ShoppingCartOutlined />}
+
+              shape="circle"
+              onClick={() => {
+                setTheme(theme == "light" ? "dark" : "light");
+              }}
+            />
+          </Badge>
+        </Link>
+
         <Button
-          text={theme == "light" ? "Make it Dark" : "Make it Light"}
+          icon={<MoonOutlined />}
+          shape="circle"
           onClick={() => {
             setTheme(theme == "light" ? "dark" : "light");
           }}

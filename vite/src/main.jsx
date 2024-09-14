@@ -4,11 +4,14 @@ import "./index.css";
 import AppRouter from "./Route.jsx";
 import ThemeContextProvider from "./context/ThemeContext.jsx";
 import UserContextProvider from "./context/UserContext.jsx";
+import CartContextProvider from "./context/CartContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <UserContextProvider>
     <ThemeContextProvider>
-      <AppRouter />
+      <CartContextProvider>
+        <AppRouter />
+      </CartContextProvider>
     </ThemeContextProvider>
   </UserContextProvider>
 );

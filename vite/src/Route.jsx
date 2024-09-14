@@ -11,6 +11,7 @@ import SignIn from "./pages/Auth/Signin";
 import SignUp from "./pages/Auth/Signup";
 import { auth } from "./utils/firebase";
 import Profile from "./pages/Profile";
+import CartPage from "./pages/Cart";
 
 function AppRouter() {
   return (
@@ -18,6 +19,7 @@ function AppRouter() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/useEffect" element={<UseEffect />} />
         <Route path="/product/:id" element={<Product />} />
